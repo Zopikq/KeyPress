@@ -1,0 +1,25 @@
+package org.example;
+
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+public class Main {
+
+    public static void main(String[] args) {
+        try {
+            Robot robot = new Robot();
+
+            while (true) {
+                robot.keyPress(KeyEvent.VK_W);
+                Thread.sleep(10000);
+                robot.keyRelease(KeyEvent.VK_W);
+                robot.keyPress(KeyEvent.VK_S);
+                Thread.sleep(12000);
+                robot.keyRelease(KeyEvent.VK_S);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
